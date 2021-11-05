@@ -86,6 +86,7 @@ class SmartBatchingSampler(Sampler):
             yield ids
 
     def _get_audio_length(self, audio_path):
+        # print("audio_path is: ", audio_path)
         return len(load_audio(os.path.join(self.data_source.dataset_path, audio_path), sample_rate=16000))
 
     def __len__(self):
